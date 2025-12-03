@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>US Racial Demographics Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="controls" class="panel">
+    <h3>Fertility Rates</h3>
+    <label>Noirs: <input type="number" id="fert_black" step="0.01" value="1.8"></label><br><br>
+    <label>Blancs: <input type="number" id="fert_white" step="0.01" value="1.6"></label><br><br>
+    <label>Hispaniques: <input type="number" id="fert_hisp" step="0.01" value="2.0"></label><br><br>
+    <label>Asiatiques: <input type="number" id="fert_asian" step="0.01" value="1.4"></label><br><br>
+    <label>Autres: <input type="number" id="fert_other" step="0.01" value="1.8"></label><br><br>
+</div>
+
+<div id="chartContainer">
+    <canvas id="pieChart"></canvas>
+    <div id="yearContainer">
+        Année : <span id="yearValue">2025</span>
+        <div id="sliderContainer">
+            <input type="range" id="timeSlider" min="2025" max="2045" value="2025" step="1">
+        </div>
+    </div>
+</div>
+
+<div id="deathControls" class="panel">
+    <h3>Death Rates (%)</h3>
+    <label>Noirs: <input type="number" id="death_black" step="0.01" value="1"></label><br><br>
+    <label>Blancs: <input type="number" id="death_white" step="0.01" value="1"></label><br><br>
+    <label>Hispaniques: <input type="number" id="death_hisp" step="0.01" value="1"></label><br><br>
+    <label>Asiatiques: <input type="number" id="death_asian" step="0.01" value="1"></label><br><br>
+    <label>Autres: <input type="number" id="death_other" step="0.01" value="1"></label><br><br>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
